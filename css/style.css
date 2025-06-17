@@ -60,12 +60,12 @@
 .image-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* απόσταση μεταξύ εικόνων */
+  gap: 10px; /* απόσταση μεταξύ εικόνων */
 }
 
 .image-row img {
   width: 40%;
-  height: auto;
+  height: 600px;
 }
 
 	.project-link {
