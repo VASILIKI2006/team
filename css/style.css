@@ -58,13 +58,14 @@
 	}
 
 .image-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px; /* απόσταση μεταξύ εικόνων */
 }
 
-.image-row iframe {
-  flex: 1; /* ίσο πλάτος σε κάθε iframe */
-  max-width: 100%;
+.image-row img {
+  width: 100%;
+  height: auto;
 }
 
 	.project-link {
