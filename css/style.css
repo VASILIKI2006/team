@@ -1,7 +1,7 @@
 	body {
 		font-family: 'Arial';
 		background-color: #F9F2F1;
-		display: flex;
+		/*display: flex;*/
 		flex-direction: column;
 		justify-content: center;
 		flex-wrap: wrap;
