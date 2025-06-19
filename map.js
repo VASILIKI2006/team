@@ -162,7 +162,7 @@ function mercY(lat) {
 //setup
 function setup() {
   canvas=createCanvas(900, 900);
-  select('#p5-container')index.html('');
+  select('#p5-container').index.html('');
   canvas.parent('p5-container');
   cx = mercX(0);
   cy = mercY(0);
