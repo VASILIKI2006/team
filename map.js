@@ -161,7 +161,8 @@ function mercY(lat) {
 //setup
 function setup() {
   canvas=createCanvas(windowWidth, windowHeight);
-  canvas.parent("p5-container");
+  select('#p5-container').html('');
+  canvas.parent('p5-container');
   cx = mercX(0);
   cy = mercY(0);
   imageMode(CENTER);
