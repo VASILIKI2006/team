@@ -3,7 +3,7 @@ console.log("map.js φορτώθηκε!");
 let mapimg; //Μεταβλητή της εικόνας του χάρτη
 let cx, cy;
 let selectedCity = null;
-
+let canvas;
 //Array για την απόθηκευση των στοιχείων των πόλεων
 let points = [
   {
@@ -157,7 +157,7 @@ function mercY(lat) {
   let c = PI - log(b);
   return a * c;
 }
-let canvas;
+
 //setup
 function setup() {
   canvas=createCanvas(windowWidth, windowHeight);
