@@ -137,7 +137,7 @@ let clearMap = false;
 //Με το preload η εικόνα του χάρτη από το mapbox φορτώνεται πριν τον υπόλοιπο κώδικα
 function preload() {
   mapimg = loadImage(
-    `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/${800}x${800}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYThhMHQwMmpnMm1xdzFhNTByM2N6In0.Eg9224RaAViI7ZlPXsNmWg"}`
+    `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/${900}x${900}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYThhMHQwMmpnMm1xdzFhNTByM2N6In0.Eg9224RaAViI7ZlPXsNmWg"}`
   );
   console.log(mapimg);
 }
@@ -161,7 +161,7 @@ function mercY(lat) {
 
 //setup
 function setup() {
-  canvas=createCanvas(800, 800);
+  canvas=createCanvas(900, 900);
   select('#p5-container')index.html('');
   canvas.parent('p5-container');
   cx = mercX(0);
