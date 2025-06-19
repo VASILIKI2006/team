@@ -157,10 +157,10 @@ function mercY(lat) {
   let c = PI - log(b);
   return a * c;
 }
-
+let canvas=;
 //setup
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas=createCanvas(windowWidth, windowHeight);
   canvas.parent("p5-container");
   cx = mercX(0);
   cy = mercY(0);
