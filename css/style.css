@@ -23,8 +23,6 @@
 		font-size: 40px;
 	}
 
-
-
 	h5 {
 		color: #AB3D3D;
 		text-align: center;
@@ -37,7 +35,7 @@
 		margin: 10px 0;
 		text-align: center;
 		margin: 0 0 15px 0;
-		font-size: 25px;
+		font-size: 20px;
 		padding: 0 10%;
 	}
 
@@ -57,22 +55,14 @@
 		text-align: center;
 	}
 
-.image-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px; /* απόσταση μεταξύ εικόνων */
-}
+	.image-row {
+ 	 display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	gap: 30px; /* απόσταση μεταξύ εικόνων */
+	}
 
-.image-row img {
-  width: 35%;
-  height: 400px;
-}
-
-	.project-link {
-		display: inline-block;
-		text-align: center;
-		color: #000000;
-		text-decoration: none;
-		font-size: 20px;
+	.image-row img {
+  	width: 35%;
+  	height: 400px;
 	}
 
