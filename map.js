@@ -137,7 +137,7 @@ let clearMap = false;
 //Με το preload η εικόνα του χάρτη από το mapbox φορτώνεται πριν τον υπόλοιπο κώδικα
 function preload() {
   mapimg = loadImage(
-    `https://api.mapbox.com/styles/v1/mapbox/light-v8/static/0,0,1,0,0/${windowWidth}x${windowHeight}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYjZmYWMwMm5hMmtzM3ZrcHR1NWF5In0.aTW34SnBMmnpzlYjIlg6kA"}`
+    `https://api.mapbox.com/styles/v1/mapbox/light-v8/static/0,0,1,0,0/900x900?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYjZmYWMwMm5hMmtzM3ZrcHR1NWF5In0.aTW34SnBMmnpzlYjIlg6kA"}`
   );
   console.log(mapimg);
 }
@@ -161,7 +161,7 @@ function mercY(lat) {
 
 //setup
 function setup() {
-  canvas=createCanvas(windowWidth, windowHeight);
+  canvas=createCanvas(900,900);
   select('#p5-container').html('');
   canvas.parent('p5-container');
   cx = mercX(0);
@@ -192,7 +192,7 @@ for (let i = 0; i < p.numBuildings; i++) {
       for (let j = 0; j < floors; j++) {
         building.push({
           x1: restX + j * 5, //Ορίζουμε αρχική μετατόπιση του κάθε ορόφου ώστε να ξεκινάει με ταχύτητα την ταλάντωση
-          y1: (7 * windowHeight) / 8 - j * 40,
+          y1: (7 * 900) / 8 - j * 40,
           u: 0,
           restX: restX,
         });
@@ -225,15 +225,15 @@ function drawBuilding(building) {
 //draw
 function draw() {
   translate(
-    width / 2,
-    height / 2
+    900 / 2,
+    900 / 2
   ); //Ορίζουμε με μεταβλητή το κέντρο των αξόνων για να ξέρουμε πόση απόσταση από αυτό θα έχουν τα σημεία
   //Ορίζουμε τι θα γίνει αν ισχύει η εντολή clearMap και selectedCity
   if (clearMap && selectedCity) {
     background(224, 224, 224); //Αλλάζει το background
-    translate(0 - windowWidth / 2, 0 - windowHeight / 2); //Επαναφέρουμε το σημείο (0,0) πάνω αριστερά
+    translate(0 - 900 / 2, 0 - 900 / 2); //Επαναφέρουμε το σημείο (0,0) πάνω αριστερά
     strokeWeight(6);
-    line(0, (7 * windowHeight) / 8, windowWidth, (7 * windowHeight) / 8);//Σχεδιάζουμε την γραμμή του εδάφους
+    line(0, (7 * 900) / 8, 900, (7 * 900) / 8);//Σχεδιάζουμε την γραμμή του εδάφους
     selectedCity.showInfo();
     for (let building of selectedCity.buildings) {
       for (let i = 1; i < building.length; i++) {
@@ -260,14 +260,14 @@ function draw() {
 }
 ////Ελέγχουμε τη θέση του ποντικιού και τι αλλάζει ανάλογα με αυτή
 function mouseClicked() {
-  let mX = mouseX - width / 2;
-  let mY = mouseY - height / 2;
+  let mX = mouseX - 900 / 2;
+  let mY = mouseY - 900 / 2;
   if (clearMap) {//Πότε πατιέται το κουμπί του return και τι γίνεται
     if (
       mouseX > 30 &&
       mouseX < 60 &&
-      mouseY > windowHeight / 8 &&
-      mouseY < windowHeight / 8 + 30
+      mouseY > 900 / 8 &&
+      mouseY < 900 / 8 + 30
     ) {
       clearMap = false;
       selectedCity = null;
@@ -287,6 +287,6 @@ function mouseClicked() {
 //Σχεδιασμός του τετραγώνου του return
 function gotomap() {
   fill(220, 29, 25);
-  rect(30, windowHeight / 8, 30, 30);
-  text("return", 70, windowHeight / 8 + 20);
+  rect(30, 900 / 8, 30, 30);
+  text("return", 70, 900 / 8 + 20);
 }
