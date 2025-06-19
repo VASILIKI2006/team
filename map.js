@@ -157,7 +157,7 @@ function mercY(lat) {
   let c = PI - log(b);
   return a * c;
 }
-let canvas=;
+let canvas;
 //setup
 function setup() {
   canvas=createCanvas(windowWidth, windowHeight);
