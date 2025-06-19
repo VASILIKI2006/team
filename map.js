@@ -137,7 +137,7 @@ let clearMap = false;
 //Με το preload η εικόνα του χάρτη από το mapbox φορτώνεται πριν τον υπόλοιπο κώδικα
 function preload() {
   mapimg = loadImage(
-    `https://api.mapbox.com/styles/v1/mapbox/light-v8/static/0,0,1,0,0/${windowWidth}x${windowHeight}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMyNnBidmwwNG50MmxzZmlmZWhuZzdyIn0.EgiLHmqPbg9gVZEc8pSptA"}`
+    `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/${windowWidth}x${windowHeight}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYThhMHQwMmpnMm1xdzFhNTByM2N6In0.Eg9224RaAViI7ZlPXsNmWg"}`
   );
 }
 
