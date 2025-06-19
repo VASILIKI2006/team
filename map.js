@@ -139,6 +139,7 @@ function preload() {
   mapimg = loadImage(
     `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/${windowWidth}x${windowHeight}?access_token=${"pk.eyJ1IjoidmthbGtvdW5vdSIsImEiOiJjbWMzYThhMHQwMmpnMm1xdzFhNTByM2N6In0.Eg9224RaAViI7ZlPXsNmWg"}`
   );
+  console.log(mapimg);
 }
 
 //Μετατροπή των συντεταγμένων σε pixel
